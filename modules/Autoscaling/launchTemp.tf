@@ -2,7 +2,7 @@
 # --- Launch Template For Bastion Host ---
 
 resource "aws_launch_template" "bastion-launch-template" {
-  image_id               = lookup(var.ami, var.bastion, "ami-0d527b8c289b4af7f")
+  image_id               = lookup(var.ami, "bastion", "ami-0d527b8c289b4af7f")
   instance_type          = var.instance_type
   vpc_security_group_ids = [var.bastion_security_group_id]
 
@@ -38,7 +38,7 @@ resource "aws_launch_template" "bastion-launch-template" {
 # launch template for nginx
 
 resource "aws_launch_template" "nginx-launch-template" {
-  image_id               = lookup(var.ami, var.nginx, "ami-0d527b8c289b4af7f")
+  image_id               = lookup(var.ami, "nginx", "ami-0d527b8c289b4af7f")
   instance_type          = var.instance_type
   vpc_security_group_ids = [var.nginx_security_group_id]
 
@@ -74,7 +74,7 @@ resource "aws_launch_template" "nginx-launch-template" {
 # launch template for wordpress
 
 resource "aws_launch_template" "wordpress-launch-template" {
-  image_id               = lookup(var.ami, var.wordpress, "ami-0d527b8c289b4af7f")
+  image_id               = lookup(var.ami, "wordpress", "ami-0d527b8c289b4af7f")
   instance_type          = var.instance_type
   vpc_security_group_ids = [var.webservers_security_group_id]
 
@@ -111,7 +111,7 @@ resource "aws_launch_template" "wordpress-launch-template" {
 
 # launch template for toooling
 resource "aws_launch_template" "tooling-launch-template" {
-  image_id               = lookup(var.ami, var.tooling, "ami-0d527b8c289b4af7f")
+  image_id               = lookup(var.ami, "tooling", "ami-0d527b8c289b4af7f")
   instance_type          = "t2.micro"
   vpc_security_group_ids = [var.webservers_security_group_id]
 
