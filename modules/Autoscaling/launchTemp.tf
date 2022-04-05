@@ -31,7 +31,7 @@ resource "aws_launch_template" "bastion-launch-template" {
     )
   }
 
-  user_data = filebase64("${path.module}/../../scripts/bastion.sh")
+ # user_data = filebase64("${path.module}/../../scripts/bastion.sh")
 }
 
 
@@ -67,7 +67,7 @@ resource "aws_launch_template" "nginx-launch-template" {
     )
   }
   # user_data = base64(templatefile("${path.module}/../../scripts/nginx.sh", {internalLB = var.internal_lb_dns_name}))
-  user_data = filebase64("${path.module}/../../scripts/nginx.sh")
+ # user_data = filebase64("${path.module}/../../scripts/nginx.sh")
 }
 
 
@@ -104,7 +104,7 @@ resource "aws_launch_template" "wordpress-launch-template" {
 
   }
 
-  user_data = filebase64("${path.module}/../../scripts/wordpress.sh")
+ # user_data = filebase64("${path.module}/../../scripts/wordpress.sh")
 }
 
 
@@ -141,5 +141,5 @@ resource "aws_launch_template" "tooling-launch-template" {
 
   }
 
-  user_data = filebase64("${path.module}/../../scripts/tooling.sh")
+ # user_data = filebase64("${path.module}/../../scripts/tooling.sh")
 }

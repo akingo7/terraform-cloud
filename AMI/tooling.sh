@@ -16,4 +16,8 @@ sudo rm -r /var/www/html/*
 sudo mv tooling/* /var/www/html/
 sudo mv /var/www/html/html/* /var/www/html/
 sudo rmdir /var/www/html/html/
+#Enable php7.4-fpm
+sudo a2enmod proxy_fcgi setenvif 
+sudo a2enconf php7.4-fpm
+sudo systemctl reload apache2
 sudo systemctl restart apache2

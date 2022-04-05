@@ -25,7 +25,11 @@ sudo apt-get install php7.4 php7.4-fpm -y
 # }
 # }" >> /etc/nginx/conf.d/test.conf
 sudo apt-get install php-mysql php-mbstring php-xml php-gd php-curl php-bcmath php-ldap mlocate php-fpm -y
+#Enable php7.4-fpm
+sudo a2enmod proxy_fcgi setenvif 
+sudo a2enconf php7.4-fpm
 sudo systemctl reload apache2
+sudo systemctl restart apache2
 
 
 
