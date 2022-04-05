@@ -87,6 +87,7 @@ resource "aws_lb_target_group" "wordpress-tgt" {
     timeout             = 5
     healthy_threshold   = 5
     unhealthy_threshold = 2
+    matcher = "200-303"
   }
 
   name        = "wordpress-tgt"
@@ -106,6 +107,8 @@ resource "aws_lb_target_group" "tooling-tgt" {
     timeout             = 3
     healthy_threshold   = 5
     unhealthy_threshold = 2
+        matcher = "200-303"
+
   }
 
   name        = "tooling-tgt"
