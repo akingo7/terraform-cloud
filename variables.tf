@@ -37,8 +37,10 @@ variable "tags" {
 variable "ami" {
   type = map(any)
   default = {
-    us-east-1    = "ami-04505e74c0741db8d"
-    eu-central-1 = "ami-0d527b8c289b4af7f"
+    bastion   = ""
+    nginx     = ""
+    wordpress = ""
+    tooling   = ""
   }
 }
 
