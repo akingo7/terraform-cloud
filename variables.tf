@@ -37,10 +37,10 @@ variable "tags" {
 variable "ami" {
   type = map(any)
   default = {
-    bastion   = ""
-    nginx     = ""
-    wordpress = ""
-    tooling   = ""
+    bastion   = "ami-08c61fe94b81c5cce"
+    nginx     = "ami-06944fbda45ea1598"
+    wordpress = "ami-01d8a6fc4dd6c4119"
+    tooling   = "ami-02f74777a448d501e"
   }
 }
 
