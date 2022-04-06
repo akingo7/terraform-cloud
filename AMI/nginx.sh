@@ -13,8 +13,8 @@ sudo echo "server {
     server_name         *.gabrieldevops.ml;
 
     location /yourapp {
-        proxy_pass ${internalLB};
-        proxy_set_header Host $host;
+        proxy_pass http://internal-ialb-862832700.eu-central-1.elb.amazonaws.com ;
+        proxy_set_header   Host             $host;
         
     }
     }" >> /etc/nginx/conf.d/reverse.conf
