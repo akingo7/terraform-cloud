@@ -12,7 +12,7 @@ sudo echo "server {
     listen             80;
     server_name         *.gabrieldevops.ml;
 
-    location /yourapp {
+    location / {
         proxy_pass http://internal-ialb-862832700.eu-central-1.elb.amazonaws.com ;
         proxy_set_header   Host             $host;
         
