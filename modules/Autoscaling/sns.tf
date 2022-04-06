@@ -1,6 +1,6 @@
 
 resource "aws_sns_topic" "sns" {
-  name = "user-updates-topic"
+  name = "SNS-Topic"
 }
 
 resource "aws_autoscaling_notification" "autoscaling_notifications" {
